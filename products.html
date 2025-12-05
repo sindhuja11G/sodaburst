@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - SodaBurst</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">🥤 SodaBurst</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count" class="cart-badge">0</span></a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h1 class="page-title">Our Beverages</h1>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="🔍 Search for drinks...">
+            </div>
+
+            <!-- Category Filters -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-category="all">All Drinks</button>
+                <button class="filter-btn" data-category="Classic Sodas">Classic Sodas</button>
+                <button class="filter-btn" data-category="Fruit Juices">Fruit Juices</button>
+                <button class="filter-btn" data-category="Energy Drinks">Energy & Sports</button>
+                <button class="filter-btn" data-category="Diet Drinks">Diet & Sugar-Free</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be dynamically loaded here -->
+            </div>
+
+            <div id="no-results" class="no-results" style="display: none;">
+                <p>😔 No drinks found. Try a different search or category!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SodaBurst. All rights reserved.</p>
+            <p>Bursting with Flavour, Chilled to Perfection!</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210?text=Hi%20SodaBurst!%20I%20want%20to%20order%20some%20refreshing%20drinks!" 
+       class="whatsapp-float" 
+       target="_blank">
+        <span class="whatsapp-icon">💬</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
