@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - SodaBurst</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">🥤 SodaBurst</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart <span id="cart-count" class="cart-badge">0</span></a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Payment Section -->
+    <section class="payment-section">
+        <div class="container">
+            <h1 class="page-title">Checkout</h1>
+
+            <div class="checkout-grid">
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div id="checkout-items">
+                        <!-- Items will be loaded here -->
+                    </div>
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="checkout-subtotal">₹0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Delivery:</span>
+                            <span>₹40</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="checkout-total">₹0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Form -->
+                <div class="payment-form">
+                    <h2>Delivery Details</h2>
+                    <form id="payment-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mobile">Mobile Number *</label>
+                            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Delivery Address *</label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="area">Delivery Area *</label>
+                            <select id="area" name="area" required>
+                                <option value="">Select Area</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Secunderabad">Secunderabad</option>
+                                <option value="Kukatpally">Kukatpally</option>
+                                <option value="Miyapur">Miyapur</option>
+                                <option value="Gachibowli">Gachibowli</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Payment Method *</label>
+                            <div class="payment-methods">
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="card" required>
+                                    <span>💳 Card</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="upi" required>
+                                    <span>📱 UPI</span>
+                                </label>
+                                <label class="payment-option">
+                                    <input type="radio" name="payment" value="cod" required>
+                                    <span>💵 Cash on Delivery</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SodaBurst. All rights reserved.</p>
+            <p>Bursting with Flavour, Chilled to Perfection!</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919876543210?text=Hi%20SodaBurst!%20I%20want%20to%20order%20some%20refreshing%20drinks!" 
+       class="whatsapp-float" 
+       target="_blank">
+        <span class="whatsapp-icon">💬</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
